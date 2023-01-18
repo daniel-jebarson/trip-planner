@@ -1,19 +1,14 @@
-import { LeftButton, RightButton } from "chakra-ui-carousel";
+import {Box,Text} from "@chakra-ui/react"
 
-function Example() {
+
+
+export default function Slider(props) {
+
   return (
-    <Box>
-      <Provider>
-        <Carousel gap={50}>
-        <div></div>
-        </Carousel>
-        <LeftButton
-          bgColor="red.500"
-          customIcon={<ArrowLeftIcon />}
-          textColor={"white.500"}
-        />
-        <RightButton bgColor="blue.500" customIcon={<ArrowRightIcon />} />
-      </Provider>
+    <Box display={"flex"}>
+          <Box bgColor={"ActiveBorder"} width={100} height={100} >
+            <Text color={"white"}>{props.weather}</Text>
+          </Box>
     </Box>
   );
 }
